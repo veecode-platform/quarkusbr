@@ -1,0 +1,8 @@
+project:
+  name: quarkusbr
+  description: teste
+  java:
+    package: codes.platform.demo
+  language: java
+  framework: quarkus
+  applicationPort: 8080

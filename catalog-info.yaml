@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: quarkusbr
+  description: "teste"
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: "quarkusbr"
+    github.com/project-slug: veecode-platform/quarkusbr
+    vault.io/secrets-path: "quarkusbr"
+    grafana/tag-selector: "quarkusbr"
+    grafana/alert-label-selector: "alertname="
+    argocd/proxy-url: '/argocd/api'
+    argocd/app-name: "quarkusbr"
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "group:default/admin"
