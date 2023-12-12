@@ -43,9 +43,6 @@ jobs:
           -Dquarkus.kubernetes.ingress.annotations."konghq.com/protocols"=https \
           -Dquarkus.kubernetes.ingress.annotations."konghq.com/strip-path"=true \
           -Dquarkus.kubernetes.ingress.annotations."kubernetes.io/tls-acme"=true
-      - name: Generating Kubernetes config for Kong
-        run: |
-          npx insomnia-inso generate config "$(cat .insomnia/ApiSpec/spc_*.yml | yq '.fileName')" --type kubernetes --output ./k8s/kong-kubernetes.yaml
 
       - name: Publish K8S Artifact
         uses: dmnemec/copy_file_to_another_repo_action@main
